@@ -1,59 +1,112 @@
 img {
-	width: 100%;
-	height: auto;
+    width: 100%;
+    height: auto;
 }
 
-
 header {
-	height: 800px;
-	margin: 0 0 100px 0;
-	background-image: url("images/header.png");
-	background-position: 90% 30%;
-	background-size: cover;
-	position: relative;
+    height: 800px;
+    margin: 0;
+    background-image: url("images/header.png");
+    background-position: 90% 30%;
+    background-size: cover;
+    position: relative;
 }
 
 header h1 {
     color: white;
     font-size: 40px;
-	font-family: Georgia, 'Times New Roman', Times, serif;
-	font-weight: bold;
-    margin: 20% 20% 20% 20%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin: 20%;
+    text-align: center;
 }
+
 header p {
     color: white;
     font-size: 20px;
-	position: absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
 }
-
 
 .header_button {
-	font-size: 15px;
-}
-
-header button {
-	size: 100px;
+    font-size: 15px;
     background-color: #1E90FF;
     color: #fff;
-    border: 80px;
-    border-radius:50px;
-	padding: 14px 40px;
-	cursor: pointer;
-	position: absolute;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    padding: 14px 40px;
+    cursor: pointer;
+    position: absolute;
     top: 70%;
     left: 50%;
-    margin-right: -60%;
-    transform: translate(-60%, -60%)
+    transform: translate(-50%, -50%);
+}
+
+.nav_top {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+}
+
+.nav_top .menu_items {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav_top .menu_items li {
+    margin-right: 40px;
+}
+
+.nav_top .menu_items li:last-child {
+    margin-right: 0;
+}
+
+.nav_top a {
+    font-size: 15px;
+    font-family: 'Lucida Sans', sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+.nav_top a:hover {
+    cursor: pointer;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+
+.social_icons {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    display: flex;
+    gap: 10px;
+}
+
+.social_icons i {
+    color: #ffffff;
+    font-size: 2em; 
+}
+
+.logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+}
+
+ul {
+    margin-right: 15px;
+    padding: 4px;
 }
 
 .title_section {
     display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-bottom: 60px;
@@ -61,60 +114,84 @@ header button {
     border-radius: var(--border-radius-size);
 }
 
-.social_icons {
-    position: absolute;
-    top: 5%;
-    right: 15%;
-    display: grid;
-	grid-auto-flow: column;
-	justify-content: flex-end;
-
-}
-i {
-    display: inline; 
-    padding: 20px; 
+h2 {
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
 }
 
-nav {
-	position: fixed;
-	top: 5%;
-	width: 100%;
-	justify-content: flex-end;
-}
-nav a {
-	font-size: 15px;
-	padding: 8px 15px;
-	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	color: white;
-	text-decoration: none;
+h2 > p {
+    color: black;
+    font-size: 20px;
+    text-align: center;
 }
 
-nav a:hover {
-    cursor: pointer;
-    color: white;
-    transform: scale(1.1);
+.feature {
+    width: 25px;
 }
 
-.logo {
+.title_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title_section .columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title_section .column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.title_section .column img {
+    margin-bottom: 10px;
+}
+
+.title_section .column h3,
+.title_section .column p {
+    color: #000; 
+    text-align: center;
+}
+
+
+.video {
     position: relative;
-    width: 150px;
-    top: 32px;
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: inline-block; 
 }
 
-
-ul {
-    margin-right: 15px; 
-    padding: 4px; 
+.video_button {
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    border: none;
+    background: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-nav ul li {
-    display: inline; 
-    margin-left: 5px; 
-    padding: 10px; 
-    transition: all .2s ease-in-out;
-
+.preview-container {
+    position: relative;
+    display: inline-block; 
 }
+
+.preview {
+    width: 100%; 
+    height: auto; 
+}
+
+.video_button img {
+    width: 70px;
+    height: 70px;
+}
+
 
