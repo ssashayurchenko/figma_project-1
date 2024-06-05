@@ -194,4 +194,37 @@ h2 > p {
     height: 70px;
 }
 
+.third_slide {
+    display: flex;
+    flex-direction: row; /* Change to row to align content and image horizontally */
+    align-items: center; /* Center vertically */
+    justify-content: space-between; /* Push content and image to opposite sides */
+    height: 100vh; /* Adjust the height as needed */
+}
 
+.third_slide > .content {
+    max-width: 50%; /* Limit width to half of the container */
+    padding-left: 3%; /* Adjust left padding as needed */
+}
+
+.third_slide > .content > h2,
+.third_slide > .content > p,
+.third_slide > .content > .third_button {
+    text-align: left; /* Align text to the left */
+}
+
+.third_button {
+    font-size: 15px;
+    background-color: #1E90FF;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 50px;
+    padding: 14px 40px;
+    cursor: pointer;
+}
+
+
+.third_slide img {
+    max-width: 50%; /* Limit image width to half of the container */
+    height: auto;
+}
